@@ -2,7 +2,7 @@ import React from 'react';
 import Day from './day';
 import "./index.css";
 
-const Week = ({ date, month }) => {
+const Week = ({ date, month, filters }) => {
   const daysOfWeek = Array(7)
     .fill()
     .map((item, index) => date.clone().add(index, "day"));
@@ -11,7 +11,11 @@ const Week = ({ date, month }) => {
     <div className="week">
     {
         daysOfWeek.map((dayDate, index) => (
-          <Day key={`day-${index}`} date={dayDate} month={month} />
+          <Day 
+            key={`day-${index}`} 
+            date={dayDate} 
+            month={month} 
+            filters={ filters }/>
         ))
     }
     </div>

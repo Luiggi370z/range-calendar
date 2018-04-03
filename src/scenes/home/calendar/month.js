@@ -3,14 +3,14 @@ import Week from './week';
 import { daysNames } from '../../../models/enums'
 import "./index.css";
 
-const Month = ({ date }) => {
+const Month = ({ date, filters }) => {
   const weeksOfMonth = date => {
     let week = date.clone().startOf("month").startOf("week");
     let weeks = [];
     do {
       weeks.push(week.clone());
       week.add(1, "week");
-    } while (week.month() === date.month());
+    } while (week.month() === date.month() && week.isBefore(filters.endDate));
     return weeks;
   };
 
@@ -31,6 +31,7 @@ const Month = ({ date }) => {
             key={`week-${index}`}
             date={weekDate}
             month={date.month()}
+            filters={ filters }
           />
         ))
       }

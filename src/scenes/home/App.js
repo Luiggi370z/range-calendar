@@ -2,6 +2,7 @@ import { Component } from "react";
 import React from 'react';
 import moment from 'moment';
 import logo from "../../images/logo.svg";
+import { allHolidays } from '../../models/enums';
 import "./App.css";
 
 import InputFields from './inputFields';
@@ -16,6 +17,7 @@ class App extends Component {
     },
     startDate: null,
     endDate: null,
+    holidays: [],
   };
 
   validate = () => {
@@ -36,8 +38,9 @@ class App extends Component {
 
     const startDate = moment(fields.startDate);
     const endDate = startDate.clone().add(parseInt(fields.totalDays), "days");
+    const holidays = allHolidays[fields.country.toLowerCase()] || []; 
 
-    this.setState({ startDate, endDate });
+    this.setState({ startDate, endDate, holidays });
   };
 
   render() {
@@ -61,7 +64,8 @@ class App extends Component {
           this.state.startDate && this.state.endDate 
           ? <Calendar 
               startDate={ this.state.startDate }
-              endDate={ this.state.endDate }/>
+              endDate={ this.state.endDate }
+              holidays={ this.state.holidays }/>
           : null
         }
       </div>
