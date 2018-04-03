@@ -13,6 +13,9 @@ Build a calendar based in a Start Date and a number of days
 
 In the project directory, for locally execution you can run:
 
+### `npm install`
+Installs all the necessary packages for the app.
+
 ### `npm start`
 
 Runs the app in the development mode.<br>
