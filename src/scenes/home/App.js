@@ -1,4 +1,5 @@
 import { Component } from "react";
+import React from 'react';
 import moment from 'moment';
 import logo from "../../images/logo.svg";
 import "./App.css";

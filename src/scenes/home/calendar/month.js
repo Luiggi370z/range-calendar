@@ -1,3 +1,5 @@
+import React from 'react';
+import Week from './week';
 import { daysNames } from '../../../models/enums'
 import "./index.css";
 
@@ -23,13 +25,15 @@ const Month = ({ date }) => {
     <div className="month">
       <div>{renderWeekDays()}</div>
       <div className="month-header">{date.format("MMMM YYYY")}</div>
-      {weeksOfMonth(date).map((weekDate, index) => (
-        <Week
-          key={`week-${index}`}
-          date={weekDate}
-          month={date.month()}
-        />
-      ))}
+      {
+        weeksOfMonth(date).map((weekDate, index) => (
+          <Week
+            key={`week-${index}`}
+            date={weekDate}
+            month={date.month()}
+          />
+        ))
+      }
     </div>
   );
 };

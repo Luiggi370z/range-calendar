@@ -1,4 +1,5 @@
 import './index.css';
+import React from 'react';
 import Field from '../../../components/field';
 
 const Fields = ({ fields, onFieldChange, onFormSubmit, isValid }) => {

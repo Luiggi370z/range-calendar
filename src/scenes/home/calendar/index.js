@@ -1,3 +1,5 @@
+import React from 'react';
+import Month from './month';
 import moment from "moment";
 import "./index.css";
 
@@ -12,7 +14,7 @@ const Calendar = ({ startDate, endDate, holidays }) => {
     <div className="calendar">
     {
         datesRange.map((date, index) => 
-            <Month key={`month-${index}`} date={date} />
+            (<Month key={`month-${index}`} date={date} />)
         )
     }
     </div>
