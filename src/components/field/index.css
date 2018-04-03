@@ -1,0 +1,9 @@
+.field > div {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.field > div > label {
+    display: block;
+    text-align: left;
+}
