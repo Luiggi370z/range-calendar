@@ -4,6 +4,7 @@ import logo from "../../images/logo.svg";
 import "./App.css";
 
 import InputFields from './inputFields';
+import Calendar from './calendar';
 
 class App extends Component {
   state = {
@@ -54,6 +55,14 @@ class App extends Component {
           onFieldChange={this.onFieldChange}
           onFormSubmit={this.onFormSubmit}
         />
+
+        {
+          this.state.startDate && this.state.endDate 
+          ? <Calendar 
+              startDate={ this.state.startDate }
+              endDate={ this.state.endDate }/>
+          : null
+        }
       </div>
     );
   }
