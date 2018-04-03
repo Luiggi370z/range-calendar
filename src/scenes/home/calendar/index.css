@@ -1,0 +1,57 @@
+.calendar {
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.month {
+    display: block;
+    width: 252px;
+    margin: 15px auto;
+}
+
+.month-header {
+    text-align: center;
+    font-weight: 600;
+    background-color: #EDF7D9;
+    margin: 0 2px;
+    padding: 2px;
+}
+
+.weekdays {
+    display: inline-block;
+    text-align: center;
+    font-weight: 600;
+    width: 32px;
+    margin: 2px;
+}
+
+.week {
+    display: block;
+}
+
+.day {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    padding: 7px;
+    margin: 2px;
+    text-align: center;
+    color: #0644C0;
+    background-color: #C3D69B;
+    vertical-align: top;
+}
+
+.invalid {
+    background-color: #CBCBCB;
+}
+
+.holiday {
+    background-color: #FF2A2A;
+    color: white;
+}
+
+.weekend {
+    background-color: #FAFD12;
+    color: black;
+}
