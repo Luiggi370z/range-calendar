@@ -1,0 +1,1 @@
+export const daysNames = ['S', 'M', 'T', 'W' , 'T', 'F', 'S'];
